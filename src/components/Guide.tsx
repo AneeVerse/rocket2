@@ -37,7 +37,7 @@ const Guide = () => {
 
   return (
     <section className="bg-white py-20 lg:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1450] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-12">
           <h2 className="text-2xl lg:text-3xl xl:text-6xl font-bold text-black mb-6 lg:mb-0 leading-tight max-w-2xl">

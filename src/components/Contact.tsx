@@ -25,7 +25,7 @@ const Contact = () => {
 
   return (
     <section className="bg-white py-16 lg:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1450] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-start">
           {/* Left Content */}
           <div className="lg:pr-4">
