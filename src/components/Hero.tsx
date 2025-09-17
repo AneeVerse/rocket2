@@ -17,8 +17,8 @@ const heroImages2 = [
 
 const Hero = () => {
   return (
-    <section className="min-h-screen bg-white p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 pt-24 sm:pt-28 md:pt-34">
-      <div className="relative h-[88vh] sm:h-[75vh] lg:h-[85vh] overflow-hidden rounded-3xl sm:rounded-[2rem] md:rounded-[2.5rem] lg:rounded-[3rem] bg-[#E8F5E8]">
+    <section className="min-h-screen bg-white p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 pt-24 sm:pt-28 md:pt-32 mt-2 ">
+      <div className="relative h-[88vh] sm:h-[75vh] lg:h-[85vh] overflow-hidden rounded-3xl sm:rounded-[2rem] md:rounded-[2rem] lg:rounded-[2rem] bg-[#def8cb]">
         {/* Main Content Container */}
         <div className="relative z-10 w-full h-full flex items-center">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,8 +84,8 @@ const Hero = () => {
                 </div>
 
                 {/* Gradient Overlays for smooth edges */}
-                <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-[#E8F5E8] to-transparent z-10 pointer-events-none"></div>
-                <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-[#E8F5E8] to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-[#def8cb] to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-[#def8cb] to-transparent z-10 pointer-events-none"></div>
               </div>
             </div>
           </div>
