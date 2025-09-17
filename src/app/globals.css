@@ -57,6 +57,24 @@ body {
   animation-play-state: paused;
 }
 
+/* Horizontal Marquee Animation for Mobile */
+@keyframes marqueeHorizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-horizontal {
+  animation: marqueeHorizontal 30s linear infinite;
+}
+
+.marquee-horizontal:hover {
+  animation-play-state: paused;
+}
+
 /* Hide scrollbars */
 .scrollbar-hide {
   -ms-overflow-style: none;
