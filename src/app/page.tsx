@@ -6,6 +6,8 @@ import Relax from "@/components/Relax";
 import Secrets from "@/components/Secrets";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
       <Blog />
       <Relax />
       <Secrets />
+      <CTASection />
+      <Footer />
     </div>
   );
 }
