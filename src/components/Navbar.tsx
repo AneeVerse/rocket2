@@ -15,8 +15,8 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-18">
+      <div className="max-w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
@@ -49,7 +49,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <Link
               href="/book-meeting"
-              className="bg-[#B8FF3B] text-black px-6 py-2 rounded-full text-sm font-medium hover:bg-[#A3E635] transition-colors duration-200"
+              className="bg-[#B8FF3B] text-black px-8 py-4 rounded-lg text-sm font-semibold hover:bg-[#A3E635] transition-colors duration-200 shadow-sm hover:shadow-md"
             >
               Book 30 Mins Free Meeting
             </Link>
@@ -114,7 +114,7 @@ const Navbar = () => {
             ))}
             <Link
               href="/book-meeting"
-              className="bg-[#B8FF3B] text-black px-6 py-2 rounded-full text-sm font-medium hover:bg-[#A3E635] transition-colors duration-200 block text-center mx-3 mt-4"
+              className="bg-[#B8FF3B] text-black px-8 py-4 rounded-full text-sm font-semibold hover:bg-[#A3E635] transition-colors duration-200 block text-center mx-3 mt-4 shadow-sm"
               onClick={() => setIsMenuOpen(false)}
             >
               Book 30 Mins Free Meeting

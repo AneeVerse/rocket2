@@ -17,7 +17,7 @@ const heroImages2 = [
 
 const Hero = () => {
   return (
-    <section className="min-h-screen bg-white p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 pt-24 sm:pt-28 md:pt-32 mt-2 ">
+    <section className="min-h-screen bg-white p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 pt-24 sm:pt-28 md:pt-32 mt-4 ">
       <div className="relative h-[88vh] sm:h-[75vh] lg:h-[85vh] overflow-hidden rounded-3xl sm:rounded-[2rem] md:rounded-[2rem] lg:rounded-[2rem] bg-[#def8cb]">
         {/* Main Content Container */}
         <div className="relative z-10 w-full h-full flex items-center">
