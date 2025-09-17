@@ -24,3 +24,50 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Custom Animations for Hero Section */
+@keyframes marqueeVerticalUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes marqueeVerticalDown {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.marquee-vertical-up {
+  animation: marqueeVerticalUp 40s linear infinite;
+}
+
+.marquee-vertical-down {
+  animation: marqueeVerticalDown 40s linear infinite;
+}
+
+.marquee-vertical-up:hover,
+.marquee-vertical-down:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbars */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth transitions */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
