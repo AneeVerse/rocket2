@@ -36,19 +36,19 @@ const Contact = () => {
             <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
               <p>
                 At Stardom Law Firm, we understand that legal issues can be a 
-                significant source of stress. That's why we offer comprehensive 
+                significant source of stress. That&apos;s why we offer comprehensive 
                 legal services designed to ease your burden and let you truly relax.
               </p>
               
               <p>
                 At Stardom Law Firm, we understand that legal issues can be a 
-                significant source of stress. That's why we offer comprehensive 
+                significant source of stress. That&apos;s why we offer comprehensive 
                 legal services designed to ease your burden and let you truly relax.
               </p>
               
               <p>
                 At Stardom Law Firm, we understand that legal issues can be a 
-                significant source of stress. That's why we offer comprehensive 
+                significant source of stress. That&apos;s why we offer comprehensive 
                 legal services designed to ease your burden and let you truly relax.
               </p>
             

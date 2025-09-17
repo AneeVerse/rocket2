@@ -14,7 +14,7 @@ const Relax = () => {
             
             <p className="text-gray-600 text-lg leading-relaxed mb-6">
               At Stardom Law Firm, we understand that legal issues can be a 
-              significant source of stress. That's why we offer comprehensive 
+              significant source of stress. That&apos;s why we offer comprehensive 
               legal services designed to ease your burden and let you truly relax.
             </p>
 
@@ -71,7 +71,7 @@ const Relax = () => {
                   </h3>
                 </div>
                 <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
-                  We believe in keeping our clients informed every step of the way. You'll 
+                  We believe in keeping our clients informed every step of the way. You&apos;ll 
                   have direct access to your attorney.
                 </p>
               </div>
