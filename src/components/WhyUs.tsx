@@ -63,19 +63,7 @@ const WhyUs = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-black to-gray-800 rounded-2xl p-8 lg:p-12 text-white">
-            <h3 className="text-2xl lg:text-3xl font-bold mb-4">
-              Ready to Start Your Name Change Process?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join thousands of satisfied clients who have successfully changed their names with our expert legal assistance.
-            </p>
-            <button className="bg-[#B8FF3B] text-black font-bold px-8 py-4 rounded-lg hover:bg-[#A6E635] transition-colors duration-200 shadow-lg hover:shadow-xl">
-              Get Started Today
-            </button>
-          </div>
-        </div>
+        
       </div>
     </section>
   );
