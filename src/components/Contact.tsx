@@ -30,26 +30,22 @@ const Contact = () => {
           {/* Left Content */}
           <div className="lg:pr-4">
             <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-black mb-8 leading-tight">
-              Relax and leave legal worries to us
+              Get Expert Guidance For Your Name Change
             </h2>
             
             <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
               <p>
-                At Stardom Law Firm, we understand that legal issues can be a 
-                significant source of stress. That&apos;s why we offer comprehensive 
-                legal services designed to ease your burden and let you truly relax.
+                Ready to change your name legally? Our experienced legal team handles everything from affidavit drafting to gazette publication.
               </p>
               
               <p>
-                At Stardom Law Firm, we understand that legal issues can be a 
-                significant source of stress. That&apos;s why we offer comprehensive 
-                legal services designed to ease your burden and let you truly relax.
+                Whether it&apos;s marriage, divorce, spelling corrections, or personal reasons - we make the complex legal process simple and stress-free. 
+                Fill out the form below and get personalized guidance from our name change experts.
               </p>
               
               <p>
-                At Stardom Law Firm, we understand that legal issues can be a 
-                significant source of stress. That&apos;s why we offer comprehensive 
-                legal services designed to ease your burden and let you truly relax.
+                All consultations are confidential and our process is 100% compliant with Indian legal requirements. 
+                Get started today and take the first step toward your new legal identity.
               </p>
             
             </div>
