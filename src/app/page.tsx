@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Partners from "@/components/Partners";
 import Guide from "@/components/Guide";
+import WhyUs from "@/components/WhyUs";
 import Relax from "@/components/Relax";
 import Secrets from "@/components/Secrets";
 import Blog from "@/components/Blog";
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <Partners />
       <Guide />
+      <WhyUs />
       <Contact />
       <Blog />
       <Relax />
