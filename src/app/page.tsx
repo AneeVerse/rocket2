@@ -19,11 +19,11 @@ export default function Home() {
       <Partners />
       <Guide />
       <WhyUs />
-      <FAQ />
       <Contact />
       <Blog />
-      <Relax />
-      <Secrets />
+         <FAQ />
+      {/* <Relax />
+      <Secrets /> */}
       <CTASection />
       <Footer />
     </div>
