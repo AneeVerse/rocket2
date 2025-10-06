@@ -11,7 +11,7 @@ const heroImages1 = [
 ];
 
 const heroImages2 = [
-  "/images/hero/hero section images/Change of Name Due to Child's Surname Change.png",
+  "/images/hero/hero section images/Change.png",
   "/images/hero/hero section images/Change of Name Due to Combining or Hyphenating Surnames.png",
   "/images/hero/hero section images/Change of Name Due to Dislike of Current Name.png",
   "/images/hero/hero section images/Change of Name Due to Mistakes in School Certificates.png",
@@ -30,18 +30,16 @@ const Hero = () => {
               {/* Left Content */}
               <div className="max-w-2xl text-center lg:text-left">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black leading-tight mb-6">
-                  The law firm of
-                  <br />
-                  choice for the
-                  <br />
-                  <span className="text-black">winners</span>
+                  Change Your Name Legally
+                  Simple, Secure, Fast
                 </h1>
                 <p className="text-lg sm:text-xl text-gray-700 mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                  With a commitment to excellence, Stardom provides expert legal
-                  guidance and solutions tailored to your unique needs.
+                  Complete name change process with expert legal support. Get your affidavit, 
+                  newspaper ads, and gazette notification handled professionally. Join thousands 
+                  who've successfully changed their names with full legal compliance.
                 </p>
                 <button className="bg-black text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-gray-800 transition-colors duration-200">
-                  Get Started Now
+                  Start Your Application Now
                 </button>
               </div>
 

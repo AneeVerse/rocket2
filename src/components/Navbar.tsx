@@ -7,10 +7,10 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "About us", href: "/about" },
-    { name: "Resources", href: "/resources" },
+    { name: "ABOUT", href: "/about" },
+    { name: "BLOGS", href: "/blogs" },
+    { name: "FAQ", href: "/faq" },
+    { name: "CONTACT US", href: "/contact" },
   ];
 
   return (
@@ -31,14 +31,14 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden md:flex justify-center flex-1">
+            <div className="flex items-center space-x-5">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-black px-3 py-2 text-sm font-medium transition-colors duration-200"
+                  className="text-gray-700 hover:text-black px-2 py-2 text-sm font-medium transition-colors duration-200"
                 >
                   {item.name}
                 </Link>

@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   title: "Name Change Gazette - Your Trusted Legal Partners",
   description: "Expert legal guidance and solutions tailored to your unique needs. Relax and leave legal worries to us.",
   icons: {
-    icon: '/iav-logo.png',
-    apple: '/nav-logo.png',
+    icon: '/images/nav-logo.png',
+    apple: '/images/nav-logo.png',
   },
 };
 
