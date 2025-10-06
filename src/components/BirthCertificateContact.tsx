@@ -64,7 +64,7 @@ const BirthCertificateContact = () => {
                 Fill out the form below to get personalized guidance from our document experts. We handle everything from municipal corporation applications to magistrate orders for delayed cases. All applications are processed with full confidentiality and government-approved procedures. Get your legally valid birth certificate without the bureaucratic hassles.
               </p>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Our experienced team has successfully processed over 10,000+ birth certificate applications across all Indian states and union territories. We understand the unique requirements of each state's registration system and ensure your application meets all legal standards for acceptance by government authorities, educational institutions, and international organizations.
+                Our experienced team has successfully processed over 10,000+ birth certificate applications across all Indian states and union territories. We understand the unique requirements of each state&apos;s registration system and ensure your application meets all legal standards for acceptance by government authorities, educational institutions, and international organizations.
               </p>
             </div>
 
