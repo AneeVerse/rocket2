@@ -1,79 +1,123 @@
 import React from "react";
-import Image from "next/image";
+import Link from "next/link";
 
 const Guide = () => {
-  const services = [
+  const nameChangeReasons = [
     {
-      icon: "/images/guide/64b530ea31e2d786aa9e9f92_Frame (4).svg",
-      title: "Litigation expertise",
-      description: "Our legal experts excel in litigation, representing your interests effectively in court."
+      title: "Change of Name Due to Spelling Mistake",
+      description: "Correct spelling errors in your legal documents and official records.",
+      slug: "spelling-mistake"
     },
     {
-      icon: "/images/guide/64b530eab35ad704e5f79072_Frame (3).svg",
-      title: "Corporate Law",
-      description: "Navigate the complexities of corporate law with our experienced attorneys by your side."
+      title: "Change of Name Due to Dislike of Current Name",
+      description: "Change your name for personal preference or cultural reasons.",
+      slug: "dislike-current-name"
     },
     {
-      icon: "/images/guide/64b530ea79d8457cbbc880b1_Frame (5).svg",
-      title: "Contracts and agreements",
-      description: "Ensure your contracts are airtight and legally sound."
+      title: "Change of Name Due to Divorce",
+      description: "Revert to maiden name or adopt a new name after divorce proceedings.",
+      slug: "divorce"
     },
     {
-      icon: "/images/guide/64b530ece610739cd032b7b0_Frame.svg",
-      title: "Intellectual property",
-      description: "Protect your creative assets with our intellectual property services."
+      title: "Change of Name Due to Child's Surname Change",
+      description: "Update your child's surname for family unity or legal requirements.",
+      slug: "child-surname-change"
     },
     {
-      icon: "/images/guide/64b530eb869754706ce0af54_Frame (1).svg",
-      title: "Real estate law",
-      description: "Streamline your real estate transactions with our legal guidance."
+      title: "Change of Name Due to Combining or Hyphenating Surnames",
+      description: "Combine family names or create hyphenated surnames for marriage.",
+      slug: "combining-surnames"
     },
     {
-      icon: "/images/guide/64b530ea5688adf367af3a98_Frame (2).svg",
-      title: "Family law",
-      description: "Resolve family disputes with compassion and professionalism."
+      title: "Change of Name After Marriage",
+      description: "Adopt your spouse's surname or create a new combined family name.",
+      slug: "after-marriage"
+    },
+    {
+      title: "Change Name on Property Card",
+      description: "Update property documents with your new legal name.",
+      slug: "property-card"
+    },
+    {
+      title: "Change of Name Due to Mistakes in School Certificates",
+      description: "Correct name errors in educational certificates and academic records.",
+      slug: "school-certificates"
+    },
+    {
+      title: "Change of Name After Adoption",
+      description: "Update legal name following adoption procedures.",
+      slug: "after-adoption"
+    },
+    {
+      title: "Change of Name Due to Religious Reasons",
+      description: "Change name for religious conversion or spiritual purposes.",
+      slug: "religious-reasons"
+    },
+    {
+      title: "Change of Name Due to Political Statement",
+      description: "Update name for political or ideological expression.",
+      slug: "political-statement"
+    },
+    {
+      title: "Change of Name Due to Transgender Transition",
+      description: "Legal name change to align with gender identity.",
+      slug: "transgender-transition"
     }
   ];
 
   return (
-    <section className="bg-white py-20 lg:py-28">
+    <section className="bg-white py-16 lg:py-24">
       <div className="max-w-[1450] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-12">
-          <h2 className="text-2xl lg:text-3xl xl:text-6xl font-bold text-black mb-6 lg:mb-0 leading-tight max-w-2xl">
-            Your trusted legal landscape guide
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-black mb-6 leading-tight">
+            Choose Your Reason for Name Change
           </h2>
-          
-          <button className="bg-black text-white font-medium px-6 py-3 rounded-full hover:bg-gray-800 transition-colors duration-200 text-sm whitespace-nowrap self-start">
-            Learn More
-          </button>
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Explore the most common legal reasons for changing your name in India — including marriage, divorce, adoption, school certificate errors, and more. Learn the process and legal steps for each scenario with expert guidance.
+          </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 lg:gap-x-12 lg:gap-y-12">
-          {services.map((service, index) => (
-            <div key={index} className="group">
-              {/* Icon and Title Row */}
-              <div className="flex items-center gap-4 mb-3">
-                <Image
-                  src={service.icon}
-                  alt={`${service.title} icon`}
-                  width={28}
-                  height={28}
-                  className="w-7 h-7 flex-shrink-0"
-                />
-                <h3 className="text-lg lg:text-xl font-bold text-black leading-tight">
-                  {service.title}
+        {/* Name Change Reasons Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {nameChangeReasons.map((reason, index) => (
+            <Link 
+              key={index} 
+              href={`/name-change/${reason.slug}`}
+              className="group block"
+            >
+              <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-200 h-full">
+                <h3 className="text-lg font-bold text-black mb-3 leading-tight">
+                  {reason.title}
                 </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {reason.description}
+                </p>
+                <div className="mt-4 text-black font-medium text-sm">
+                  Learn More →
+                </div>
               </div>
-
-              {/* Description */}
-              <p className="text-gray-600 text-sm lg:text-base leading-relaxed">
-                {service.description}
-              </p>
-            </div>
+            </Link>
           ))}
         </div>
+
+        {/* CTA Section
+        <div className="text-center mt-16">
+          <div className="max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-black mb-4">
+              Need Expert Legal Guidance?
+            </h3>
+            <p className="text-gray-600 mb-6">
+              Our experienced legal team can help you navigate the name change process for any reason. Get personalized assistance today.
+            </p>
+            <Link 
+              href="/contact"
+              className="inline-block bg-black text-white font-medium px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors duration-200"
+            >
+              Get Free Consultation
+            </Link>
+          </div>
+        </div> */}
       </div>
     </section>
   );

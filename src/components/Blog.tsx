@@ -42,7 +42,8 @@ const Blog = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-black leading-tight">
-            Read our latest blog articles
+            Name Change Resources & Guides
+
           </h2>
         </div>
 
