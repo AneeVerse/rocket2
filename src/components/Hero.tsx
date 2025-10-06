@@ -36,7 +36,7 @@ const Hero = () => {
                 <p className="text-lg sm:text-xl text-gray-700 mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
                   Complete name change process with expert legal support. Get your affidavit, 
                   newspaper ads, and gazette notification handled professionally. Join thousands 
-                  who've successfully changed their names with full legal compliance.
+                  who&apos;ve successfully changed their names with full legal compliance.
                 </p>
                 <button className="bg-black text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-gray-800 transition-colors duration-200">
                   Start Your Application Now
