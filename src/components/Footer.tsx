@@ -18,10 +18,10 @@ export default function Footer() {
             <div className="space-y-6">
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold text-white leading-tight">
-                  Experience the thrill of fitness adventure travel with Tiger Terrain. Join our community of athletes exploring breathtaking destinations.
+                  Get Your Birth Certificate Today
                 </h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  Discover your limits, push beyond them, and create unforgettable memories in stunning locations around the world.
+                  Join thousands who&apos;ve obtained their birth certificates with professional assistance and complete legal compliance.
                 </p>
               </div>
             </div>
@@ -111,7 +111,7 @@ export default function Footer() {
             
             {/* Left Side - Copyright */}
             <div className="text-center lg:text-left order-2 lg:order-1">
-              <span className="text-sm text-gray-400">© 2025 Tiger Terrain. All rights reserved.</span>
+              <span className="text-sm text-gray-400">© 2025 Name change gazette. All rights reserved.</span>
             </div>
 
             {/* Center - Privacy Policy and Terms of Service */}
