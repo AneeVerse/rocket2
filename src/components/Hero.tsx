@@ -2,17 +2,21 @@
 import React from "react";
 
 const heroImages1 = [
-  "/images/hero/683291cc4c6cf1f4e8e844fd_hero-img-1.png",
-  "/images/hero/683291cc4c6cf1f4e8e844fa_hero-img-2.png",
-  "/images/hero/683291cc4c6cf1f4e8e844f8_hero-img-3.png",
-  "/images/hero/683291cc4c6cf1f4e8e844fb_hero-img-4.png",
+  "/images/hero/hero section images/Change of Name After Marriage.png",
+  "/images/hero/hero section images/Change of Name Due to Divorce.png",
+  "/images/hero/hero section images/Change of Name Due to Religious Reasons.png",
+  "/images/hero/hero section images/Change of Name Due to Spelling Mistake.png",
+  "/images/hero/hero section images/Change of Name After Adoption.png",
+  "/images/hero/hero section images/Change Name on Property Card.png",
 ];
 
 const heroImages2 = [
-  "/images/hero/683291cc4c6cf1f4e8e844fc_hero-img-5.png",
-  "/images/hero/683291cc4c6cf1f4e8e844f9_hero-img-6.png",
-  "/images/hero/683291cc4c6cf1f4e8e844fd_hero-img-1.png",
-  "/images/hero/683291cc4c6cf1f4e8e844fa_hero-img-2.png",
+  "/images/hero/hero section images/Change of Name Due to Child's Surname Change.png",
+  "/images/hero/hero section images/Change of Name Due to Combining or Hyphenating Surnames.png",
+  "/images/hero/hero section images/Change of Name Due to Dislike of Current Name.png",
+  "/images/hero/hero section images/Change of Name Due to Mistakes in School Certificates.png",
+  "/images/hero/hero section images/Change of Name Due to Political Statement.png",
+  "/images/hero/hero section images/Change of Name Due to Transgender Transition.png",
 ];
 
 const Hero = () => {

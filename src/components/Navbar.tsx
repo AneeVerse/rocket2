@@ -21,12 +21,13 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <Image
-                src="/website-logo.svg"
+                src="/images/nav-logo.png"
                 alt="Stardom"
                 width={125}
                 height={23}
-                className="h-6 w-auto"
+                className="h-8 w-auto"
               />
+              <span className="ml-2 font-semibold text-black text-xl">NAME CHANGE GAZETTE</span>
             </Link>
           </div>
 

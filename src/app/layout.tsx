@@ -10,8 +10,12 @@ const exo = Exo({
 });
 
 export const metadata: Metadata = {
-  title: "Stardom Law Firm - Your Trusted Legal Partners",
+  title: "Name Change Gazette - Your Trusted Legal Partners",
   description: "Expert legal guidance and solutions tailored to your unique needs. Relax and leave legal worries to us.",
+  icons: {
+    icon: '/iav-logo.png',
+    apple: '/nav-logo.png',
+  },
 };
 
 export default function RootLayout({
