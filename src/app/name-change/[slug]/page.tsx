@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingActionButton from "@/components/FloatingActionButton";
 
 interface NameChangeReason {
   title: string;
@@ -633,6 +634,7 @@ export default function NameChangeReasonPage({ params }: PageProps) {
       </section>
       
       <Footer />
+      <FloatingActionButton />
     </div>
   );
 }

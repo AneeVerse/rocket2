@@ -6,6 +6,7 @@ import BirthCertificateServices from '@/components/BirthCertificateServices';
 import BirthCertificateWhyUs from '@/components/BirthCertificateWhyUs';
 import BirthCertificateFAQ from '@/components/BirthCertificateFAQ';
 import BirthCertificateContact from '@/components/BirthCertificateContact';
+import FloatingActionButton from '@/components/FloatingActionButton';
 
 const BirthCertificatePage = () => {
   return (
@@ -17,6 +18,7 @@ const BirthCertificatePage = () => {
       <BirthCertificateFAQ />
       <BirthCertificateContact />
       <Footer />
+      <FloatingActionButton />
     </div>
   );
 };
