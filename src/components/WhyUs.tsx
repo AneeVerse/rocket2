@@ -23,7 +23,7 @@ const WhyUs = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-br from-gray-50 to-white py-16 lg:py-24">
+    <section id="about" className="bg-gradient-to-br from-gray-50 to-white py-16 lg:py-24 scroll-mt-24">
       <div className="max-w-[1450px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-16">

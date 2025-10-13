@@ -7,11 +7,11 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "ABOUT", href: "/about" },
+    { name: "ABOUT", href: "/#about" },
     { name: "BIRTH CERTIFICATE", href: "/birth-certificate" },
-    { name: "BLOGS", href: "/blogs" },
-    { name: "FAQ", href: "/faq" },
-    { name: "CONTACT US", href: "/contact" },
+    { name: "BLOGS", href: "/#blogs" },
+    { name: "FAQ", href: "/#faq" },
+    { name: "CONTACT US", href: "/#contact" },
   ];
 
   return (
@@ -50,7 +50,7 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link
-              href="/book-meeting"
+              href="/#contact"
               className="bg-[#B8FF3B] text-black px-8 py-4 rounded-lg text-sm font-semibold hover:bg-[#A3E635] transition-colors duration-200 shadow-sm hover:shadow-md"
             >
               Book 30 Mins Free Meeting
@@ -159,7 +159,7 @@ const Navbar = () => {
               {/* CTA Button */}
               <div className="mt-12 px-4 animate-fade-in-up" style={{ animationDelay: "400ms" }}>
                 <Link
-                  href="/book-meeting"
+                  href="/#contact"
                   className="flex items-center justify-center w-full bg-[#B8FF3B] text-black px-8 py-5 rounded-2xl text-lg font-semibold hover:bg-[#A3E635] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                   onClick={() => setIsMenuOpen(false)}
                 >

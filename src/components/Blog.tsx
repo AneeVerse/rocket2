@@ -37,7 +37,7 @@ const Blog = () => {
   const largePost = blogPosts.find(post => post.size === "large");
 
   return (
-    <section className="bg-white py-16 lg:py-24">
+    <section id="blogs" className="bg-white py-16 lg:py-24 scroll-mt-24">
       <div className="max-w-[1450] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">

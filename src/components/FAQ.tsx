@@ -29,7 +29,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="bg-gradient-to-br from-gray-50 via-white to-gray-50 py-16 lg:py-24">
+    <section id="faq" className="bg-gradient-to-br from-gray-50 via-white to-gray-50 py-16 lg:py-24 scroll-mt-24">
       <div className="max-w-[1450px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
