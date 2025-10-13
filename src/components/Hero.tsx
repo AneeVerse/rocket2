@@ -40,8 +40,8 @@ const Hero = () => {
                   who&apos;ve successfully changed their names with full legal compliance.
                 </p>
                 <Link href="/#contact">
-                  <button className="bg-black text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-gray-800 transition-colors duration-200">
-                    Start Your Application Now
+                  <button className="bg-black text-white px-12 py-4 rounded-lg text-lg font-medium hover:bg-gray-800 transition-colors duration-200">
+                    Apply Now
                   </button>
                 </Link>
               </div>

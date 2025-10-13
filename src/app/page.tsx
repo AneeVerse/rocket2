@@ -21,7 +21,7 @@ export default function Home() {
       <Guide />
       <WhyUs />
       <Contact />
-      <Blog />
+      {/* <Blog /> */}
          <FAQ />
       {/* <Relax />
       <Secrets /> */}
