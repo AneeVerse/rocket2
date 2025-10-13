@@ -50,7 +50,7 @@ const NameChangeReasons = () => {
     {
       title: "Change of Name Due to Combining or Hyphenating Surnames",
       description: "Combine family names or create hyphenated surnames for marriage.",
-      slug: "combining-surnames",
+      slug: "combining-hyphenating-surnames",
       process: [
         "Marriage certificate verification",
         "Combined name affidavit",
@@ -83,7 +83,7 @@ const NameChangeReasons = () => {
     {
       title: "Change of Name Due to Mistakes in School Certificates",
       description: "Correct name errors in educational certificates and academic records.",
-      slug: "school-certificates",
+      slug: "school-certificate-mistakes",
       process: [
         "School/Board application",
         "Correction affidavit",

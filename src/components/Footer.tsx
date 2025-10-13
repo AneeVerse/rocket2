@@ -76,37 +76,37 @@ export default function Footer() {
                   <Link href="/" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm py-2 border-l-2 border-gray-700 hover:border-[#B8FF3B] pl-3 hover:pl-4 transition-all duration-200 block">
                     Home
                   </Link>
-                  <Link href="/about" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm py-2 border-l-2 border-gray-700 hover:border-[#B8FF3B] pl-3 hover:pl-4 transition-all duration-200 block">
+                  <Link href="/#about" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm py-2 border-l-2 border-gray-700 hover:border-[#B8FF3B] pl-3 hover:pl-4 transition-all duration-200 block">
                     About
                   </Link>
-                  <Link href="/#social-mosaic" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm py-2 border-l-2 border-gray-700 hover:border-[#B8FF3B] pl-3 hover:pl-4 transition-all duration-200 block">
-                    Gallery
+                  <Link href="/birth-certificate" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm py-2 border-l-2 border-gray-700 hover:border-[#B8FF3B] pl-3 hover:pl-4 transition-all duration-200 block">
+                    Birth Certificate
                   </Link>
                 </div>
                 
                 {/* Column 2 */}
                 <div className="space-y-3">
-                  <Link href="/contact" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm py-2 border-l-2 border-gray-700 hover:border-[#B8FF3B] pl-3 hover:pl-4 transition-all duration-200 block">
+                  <Link href="/#contact" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm py-2 border-l-2 border-gray-700 hover:border-[#B8FF3B] pl-3 hover:pl-4 transition-all duration-200 block">
                     Contact
                   </Link>
-                  <Link href="/faq" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm py-2 border-l-2 border-gray-700 hover:border-[#B8FF3B] pl-3 hover:pl-4 transition-all duration-200 block">
+                  <Link href="/#faq" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm py-2 border-l-2 border-gray-700 hover:border-[#B8FF3B] pl-3 hover:pl-4 transition-all duration-200 block">
                     FAQ
                   </Link>
-                  <Link href="/#upcoming-events" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm py-2 border-l-2 border-gray-700 hover:border-[#B8FF3B] pl-3 hover:pl-4 transition-all duration-200 block">
-                    Upcoming Events
+                  <Link href="/#blogs" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm py-2 border-l-2 border-gray-700 hover:border-[#B8FF3B] pl-3 hover:pl-4 transition-all duration-200 block">
+                    Blogs
                   </Link>
                 </div>
                 
                 {/* Column 3 */}
                 <div className="space-y-3">
-                  <Link href="/#epic-destinations-section" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm py-2 border-l-2 border-gray-700 hover:border-[#B8FF3B] pl-3 hover:pl-4 transition-all duration-200 block">
-                    Experiences
+                  <Link href="/name-change" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm py-2 border-l-2 border-gray-700 hover:border-[#B8FF3B] pl-3 hover:pl-4 transition-all duration-200 block">
+                    Name Change
                   </Link>
-                  <Link href="/#reviews-section" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm py-2 border-l-2 border-gray-700 hover:border-[#B8FF3B] pl-3 hover:pl-4 transition-all duration-200 block">
-                    Testimonials
+                  <Link href="/#guide" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm py-2 border-l-2 border-gray-700 hover:border-[#B8FF3B] pl-3 hover:pl-4 transition-all duration-200 block">
+                    Guide
                   </Link>
-                  <Link href="/#coaches-section" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm py-2 border-l-2 border-gray-700 hover:border-[#B8FF3B] pl-3 hover:pl-4 transition-all duration-200 block">
-                    Team
+                  <Link href="/#partners" className="text-gray-300 hover:text-white transition-colors duration-200 text-sm py-2 border-l-2 border-gray-700 hover:border-[#B8FF3B] pl-3 hover:pl-4 transition-all duration-200 block">
+                    Partners
                   </Link>
                 </div>
               </div>

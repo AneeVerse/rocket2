@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 interface NameChangeReason {
   title: string;
@@ -10,6 +12,7 @@ interface NameChangeReason {
   requiredDocuments: string[];
   timeline: string;
   tips: string[];
+  heroImage: string;
 }
 
 const nameChangeReasons: NameChangeReason[] = [
@@ -17,6 +20,7 @@ const nameChangeReasons: NameChangeReason[] = [
     title: "Change of Name Due to Spelling Mistake",
     description: "Correct spelling errors in your legal documents and official records. This is one of the most common and straightforward name change procedures in India.",
     slug: "spelling-mistake",
+    heroImage: "/images/hero/hero section images/Change of Name Due to Spelling Mistake.png",
     detailedProcess: [
       "Prepare a notarized affidavit stating the correct spelling, incorrect spelling, and reason for change",
       "Gather all original documents that contain the incorrect spelling as evidence",
@@ -49,6 +53,7 @@ const nameChangeReasons: NameChangeReason[] = [
     title: "Change of Name Due to Dislike of Current Name",
     description: "Change your name for personal preference, cultural reasons, or religious beliefs. Every Indian citizen has the legal right to choose their preferred name.",
     slug: "dislike-current-name",
+    heroImage: "/images/hero/hero section images/Change of Name Due to Dislike of Current Name.png",
     detailedProcess: [
       "Decide on your new name ensuring it complies with legal naming guidelines",
       "Prepare a detailed notarized affidavit explaining the reason for name change",
@@ -81,6 +86,7 @@ const nameChangeReasons: NameChangeReason[] = [
     title: "Change of Name Due to Divorce",
     description: "Revert to your maiden name or adopt a completely new name after divorce proceedings. This helps in establishing a fresh legal identity post-separation.",
     slug: "divorce",
+    heroImage: "/images/hero/hero section images/Change of Name Due to Divorce.png",
     detailedProcess: [
       "Obtain certified copies of the final divorce decree from the family court",
       "Prepare a notarized affidavit stating your intention to change name post-divorce",
@@ -113,6 +119,7 @@ const nameChangeReasons: NameChangeReason[] = [
     title: "Change of Name Due to Child's Surname Change",
     description: "Update your child's surname for family unity, adoption, or legal requirements. Special procedures and parental consent are required for minors under 18.",
     slug: "child-surname-change",
+    heroImage: "/images/hero/hero section images/Change.png",
     detailedProcess: [
       "Obtain written consent from both parents or legal guardians",
       "Prepare a notarized affidavit for the minor's name change with parental signatures",
@@ -145,6 +152,7 @@ const nameChangeReasons: NameChangeReason[] = [
     title: "Change of Name After Marriage",
     description: "Adopt your spouse's surname, create a hyphenated name, or choose a completely new family name after marriage. This is a common practice for establishing marital identity.",
     slug: "after-marriage",
+    heroImage: "/images/hero/hero section images/Change of Name After Marriage.png",
     detailedProcess: [
       "Obtain a certified copy of your marriage certificate from the registrar",
       "Prepare a notarized affidavit stating your pre-marriage and post-marriage names",
@@ -176,6 +184,7 @@ const nameChangeReasons: NameChangeReason[] = [
     title: "Change of Name Due to Combining or Hyphenating Surnames",
     description: "Combine both spouses' surnames or create a hyphenated family name to maintain both family identities after marriage or for cultural reasons.",
     slug: "combining-hyphenating-surnames",
+    heroImage: "/images/hero/hero section images/Change of Name Due to Combining or Hyphenating Surnames.png",
     detailedProcess: [
       "Decide on the exact format of the combined or hyphenated surname",
       "Prepare a notarized affidavit explaining the reason for surname combination",
@@ -207,6 +216,7 @@ const nameChangeReasons: NameChangeReason[] = [
     title: "Change Name on Property Card",
     description: "Update your name on property documents, land records, and revenue records after a legal name change. This ensures property ownership reflects your current legal identity.",
     slug: "property-card",
+    heroImage: "/images/hero/hero section images/Change Name on Property Card.png",
     detailedProcess: [
       "Complete the legal name change process and obtain gazette notification",
       "Visit the local Tehsildar or Village Revenue Officer (VRO) office",
@@ -238,6 +248,7 @@ const nameChangeReasons: NameChangeReason[] = [
     title: "Change of Name Due to Mistakes in School Certificates",
     description: "Correct name errors in educational certificates, mark sheets, and academic records. This is crucial for higher education and employment verification.",
     slug: "school-certificate-mistakes",
+    heroImage: "/images/hero/hero section images/Change of Name Due to Mistakes in School Certificates.png",
     detailedProcess: [
       "Identify all educational documents with incorrect name spellings",
       "Contact the respective educational boards or institutions",
@@ -269,6 +280,7 @@ const nameChangeReasons: NameChangeReason[] = [
     title: "Change of Name After Adoption",
     description: "Update the adopted child's name to reflect their new family identity. This involves legal procedures to establish the new parent-child relationship and name change.",
     slug: "after-adoption",
+    heroImage: "/images/hero/hero section images/Change of Name After Adoption.png",
     detailedProcess: [
       "Complete the legal adoption process through family court",
       "Obtain certified copy of the adoption order from the court",
@@ -301,6 +313,7 @@ const nameChangeReasons: NameChangeReason[] = [
     title: "Change of Name Due to Religious Reasons",
     description: "Change your name due to religious conversion, spiritual beliefs, or cultural practices. This reflects your new religious identity and personal faith journey.",
     slug: "religious-reasons",
+    heroImage: "/images/hero/hero section images/Change of Name Due to Religious Reasons.png",
     detailedProcess: [
       "Prepare a detailed notarized affidavit explaining the religious reason for name change",
       "Gather supporting documents related to religious conversion (if applicable)",
@@ -332,6 +345,7 @@ const nameChangeReasons: NameChangeReason[] = [
     title: "Change of Name Due to Political Statement",
     description: "Change your name to reflect political beliefs, social causes, or ideological statements. This is a form of personal expression protected under constitutional rights.",
     slug: "political-statement",
+    heroImage: "/images/hero/hero section images/Change of Name Due to Political Statement.png",
     detailedProcess: [
       "Ensure the new name complies with legal guidelines and is not offensive",
       "Prepare a comprehensive notarized affidavit explaining your political motivation",
@@ -363,6 +377,7 @@ const nameChangeReasons: NameChangeReason[] = [
     title: "Change of Name Due to Transgender Transition",
     description: "Update your name to reflect your gender identity as part of transgender transition. This is an important step in legal gender recognition and personal authenticity.",
     slug: "transgender-transition",
+    heroImage: "/images/hero/hero section images/Change.png",
     detailedProcess: [
       "Obtain gender recognition certificate from competent authority",
       "Prepare notarized affidavit stating your gender transition and name change",
@@ -408,20 +423,48 @@ export default function NameChangeReasonPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-white">
+      <Navbar />
+      
+      {/* Hero Section */}
+      <section className="bg-white py-16 lg:py-24">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            {/* Text Content - Left Side */}
+            <div className="flex-1 lg:pr-8">
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                {reason.title}
+              </h1>
+              <p className="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">
+                {reason.description}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                 <button className="bg-[#B8FF3B] hover:bg-[#A3E635] text-black px-8 py-3 rounded-lg font-semibold transition-colors duration-200 shadow-sm hover:shadow-md">
+                   Get Started
+                 </button>
+                 <button className="border-2 border-[#B8FF3B] text-black hover:bg-[#B8FF3B] hover:text-black px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
+                   Learn More
+                 </button>
+               </div>
+            </div>
+            
+            {/* Image - Right Side */}
+            <div className="flex-1 lg:pl-8">
+              <div className="relative">
+                <img 
+                  src={reason.heroImage} 
+                  alt={reason.title}
+                  className="w-full h-auto rounded-2xl shadow-xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-purple-600/10 rounded-2xl"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Header Section */}
       <section className="py-16 lg:py-24">
         <div className="max-w-[1450] mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Breadcrumb */}
-          <nav className="mb-8">
-            <div className="flex items-center space-x-2 text-sm text-gray-600">
-              <Link href="/" className="hover:text-black transition-colors">Home</Link>
-              <span>→</span>
-              <Link href="/name-change" className="hover:text-black transition-colors">Name Change</Link>
-              <span>→</span>
-              <span className="text-black">{reason.title}</span>
-            </div>
-          </nav>
-
           {/* Title and Description */}
           <div className="mb-12">
             <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-black mb-6 leading-tight">
@@ -584,6 +627,8 @@ export default function NameChangeReasonPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 }
