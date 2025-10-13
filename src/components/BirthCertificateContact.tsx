@@ -13,6 +13,10 @@ const BirthCertificateContact = () => {
     message: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | "">("");
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -21,10 +25,47 @@ const BirthCertificateContact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitMessage("");
+    setSubmitStatus("");
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus("success");
+        setSubmitMessage(result.message);
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          state: '',
+          certificateType: '',
+          birthYear: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus("error");
+        setSubmitMessage(result.message || "Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitStatus("error");
+      setSubmitMessage("Failed to send message. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const certificateTypes = [
@@ -131,6 +172,28 @@ const BirthCertificateContact = () => {
                   Fill out the form and our experts will contact you within 24 hours with personalized guidance.
                 </p>
               </div>
+
+              {/* Success/Error Message */}
+              {submitMessage && (
+                <div className={`mb-6 p-4 rounded-lg ${
+                  submitStatus === "success" 
+                    ? "bg-green-50 border border-green-200 text-green-800" 
+                    : "bg-red-50 border border-red-200 text-red-800"
+                }`}>
+                  <div className="flex items-center">
+                    {submitStatus === "success" ? (
+                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    ) : (
+                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    )}
+                    <span className="font-medium">{submitMessage}</span>
+                  </div>
+                </div>
+              )}
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Name */}
@@ -276,12 +339,29 @@ const BirthCertificateContact = () => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-[#B8FF3B] text-black font-bold py-3 px-4 rounded-lg hover:bg-[#A6E635] transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center text-sm"
+                  disabled={isSubmitting}
+                  className={`w-full font-bold py-3 px-4 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center text-sm ${
+                    isSubmitting 
+                      ? "bg-gray-400 text-gray-600 cursor-not-allowed" 
+                      : "bg-[#B8FF3B] text-black hover:bg-[#A6E635] hover:-translate-y-1"
+                  }`}
                 >
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                  </svg>
-                  Start My Application
+                  {isSubmitting ? (
+                    <div className="flex items-center justify-center">
+                      <svg className="animate-spin -ml-1 mr-3 h-4 w-4 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Sending Application...
+                    </div>
+                  ) : (
+                    <>
+                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                      </svg>
+                      Start My Application
+                    </>
+                  )}
                 </button>
 
                 

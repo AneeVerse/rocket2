@@ -9,6 +9,10 @@ const Contact = () => {
     phoneNumber: ""
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | "">("");
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -17,10 +21,44 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle form submission here
+    setIsSubmitting(true);
+    setSubmitMessage("");
+    setSubmitStatus("");
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus("success");
+        setSubmitMessage(result.message);
+        // Reset form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phoneNumber: ""
+        });
+      } else {
+        setSubmitStatus("error");
+        setSubmitMessage(result.message || "Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitStatus("error");
+      setSubmitMessage("Failed to send message. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -55,6 +93,28 @@ const Contact = () => {
           <div className="relative">
             {/* Form Container with Shadow */}
             <div className="bg-gray-50 rounded-2xl p-8 lg:p-18 py-12 lg:py-16 shadow-xl border border-gray-100">
+              {/* Success/Error Message */}
+              {submitMessage && (
+                <div className={`mb-6 p-4 rounded-lg ${
+                  submitStatus === "success" 
+                    ? "bg-green-50 border border-green-200 text-green-800" 
+                    : "bg-red-50 border border-red-200 text-red-800"
+                }`}>
+                  <div className="flex items-center">
+                    {submitStatus === "success" ? (
+                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    ) : (
+                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    )}
+                    <span className="font-medium">{submitMessage}</span>
+                  </div>
+                </div>
+              )}
+
               <form onSubmit={handleSubmit} className="space-y-8">
                 {/* Name Fields Row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -128,9 +188,24 @@ const Contact = () => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-[#B8FF3B] text-black font-bold py-4 px-6 rounded-lg hover:bg-[#A3E635] transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-[1.02] focus:ring-2 focus:ring-[#B8FF3B] focus:ring-offset-2 outline-none"
+                  disabled={isSubmitting}
+                  className={`w-full font-bold py-4 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform focus:ring-2 focus:ring-[#B8FF3B] focus:ring-offset-2 outline-none ${
+                    isSubmitting 
+                      ? "bg-gray-400 text-gray-600 cursor-not-allowed" 
+                      : "bg-[#B8FF3B] text-black hover:bg-[#A3E635] hover:scale-[1.02]"
+                  }`}
                 >
-                  Send Message
+                  {isSubmitting ? (
+                    <div className="flex items-center justify-center">
+                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Sending Message...
+                    </div>
+                  ) : (
+                    "Send Message"
+                  )}
                 </button>
               </form>
             </div>
