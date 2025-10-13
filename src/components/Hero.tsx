@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 
 const heroImages1 = [
   "/images/hero/hero section images/Change of Name After Marriage.png",
@@ -38,9 +39,11 @@ const Hero = () => {
                   newspaper ads, and gazette notification handled professionally. Join thousands 
                   who&apos;ve successfully changed their names with full legal compliance.
                 </p>
-                <button className="bg-black text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-gray-800 transition-colors duration-200">
-                  Start Your Application Now
-                </button>
+                <Link href="/#contact">
+                  <button className="bg-black text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-gray-800 transition-colors duration-200">
+                    Start Your Application Now
+                  </button>
+                </Link>
               </div>
 
               {/* Right Image Section - Horizontal scroll on Mobile, 2 Column on Desktop */}

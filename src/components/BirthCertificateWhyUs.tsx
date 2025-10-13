@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const BirthCertificateWhyUs = () => {
   const features = [
@@ -183,12 +184,14 @@ const BirthCertificateWhyUs = () => {
             <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-3xl mx-auto">
               Join thousands of satisfied customers who have obtained their birth certificates through our professional services. Start your application today!
             </p>
-            <button className="inline-flex items-center justify-center bg-[#B8FF3B] text-black font-bold px-8 py-4 rounded-lg hover:bg-[#A6E635] transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-1">
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-              </svg>
-              Apply for Birth Certificate Now
-            </button>
+            <Link href="/birth-certificate#birth-certificate-contact">
+              <button className="inline-flex items-center justify-center bg-[#B8FF3B] text-black font-bold px-8 py-4 rounded-lg hover:bg-[#A6E635] transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-1">
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                </svg>
+                Apply for Birth Certificate Now
+              </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Secrets = () => {
   const [activeSection, setActiveSection] = useState(0);
@@ -41,9 +42,11 @@ const Secrets = () => {
             The secrets behind our success
           </h2>
           
-          <button className="bg-black text-white font-medium px-6 py-3 rounded-full hover:bg-gray-800 transition-colors duration-200 text-sm whitespace-nowrap self-start">
-            Learn More
-          </button>
+          <Link href="/#contact">
+            <button className="bg-black text-white font-medium px-6 py-3 rounded-full hover:bg-gray-800 transition-colors duration-200 text-sm whitespace-nowrap self-start">
+              Learn More
+            </button>
+          </Link>
         </div>
 
         {/* Content Grid */}

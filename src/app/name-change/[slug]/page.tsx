@@ -438,12 +438,16 @@ export default function NameChangeReasonPage({ params }: PageProps) {
                 {reason.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                 <button className="bg-[#B8FF3B] hover:bg-[#A3E635] text-black px-8 py-3 rounded-lg font-semibold transition-colors duration-200 shadow-sm hover:shadow-md">
-                   Get Started
-                 </button>
-                 <button className="border-2 border-[#B8FF3B] text-black hover:bg-[#B8FF3B] hover:text-black px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
-                   Learn More
-                 </button>
+                 <Link href="/#contact">
+                   <button className="bg-[#B8FF3B] hover:bg-[#A3E635] text-black px-8 py-3 rounded-lg font-semibold transition-colors duration-200 shadow-sm hover:shadow-md">
+                     Get Started
+                   </button>
+                 </Link>
+                 <Link href="/#contact">
+                   <button className="border-2 border-[#B8FF3B] text-black hover:bg-[#B8FF3B] hover:text-black px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
+                     Learn More
+                   </button>
+                 </Link>
                </div>
             </div>
             
@@ -611,7 +615,7 @@ export default function NameChangeReasonPage({ params }: PageProps) {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
-                  href="/contact"
+                  href="/#contact"
                   className="inline-block bg-black text-white font-medium px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors duration-200"
                 >
                   Get Expert Help

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Blog = () => {
   const blogPosts = [
@@ -103,9 +104,11 @@ const Blog = () => {
                 </h3>
                 
                 {/* Read Blog Button */}
-                <button className="bg-black text-white font-medium px-6 py-3 rounded-full hover:bg-gray-800 transition-colors duration-200 text-sm">
-                  Read blog
-                </button>
+                <Link href="/#contact">
+                  <button className="bg-black text-white font-medium px-6 py-3 rounded-full hover:bg-gray-800 transition-colors duration-200 text-sm">
+                    Read blog
+                  </button>
+                </Link>
               </div>
             </div>
           )}
