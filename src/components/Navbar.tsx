@@ -124,12 +124,13 @@ const Navbar = () => {
             <div className="flex justify-between items-center px-6 py-5 border-b border-gray-100 bg-white">
               <Link href="/" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
                 <Image
-                  src="/website-logo.svg"
+                  src="/images/nav-logo.png"
                   alt="Stardom"
                   width={125}
                   height={23}
                   className="h-7 w-auto"
                 />
+                <span className="ml-2 font-semibold text-black text-lg">NAME CHANGE GAZETTE</span>
               </Link>
               <button
                 onClick={() => setIsMenuOpen(false)}

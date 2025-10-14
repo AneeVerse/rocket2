@@ -195,7 +195,7 @@ html {
 
 @media (max-width: 360px) and (max-height: 740px) {
   .custom-height {
-    height: 125vh;
+    height: 130vh;
   }
 }
 
