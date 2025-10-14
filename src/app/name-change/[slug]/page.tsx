@@ -438,11 +438,12 @@ export default function NameChangeReasonPage({ params }: PageProps) {
               <p className="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">
                 {reason.description}
               </p>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                  <Link 
                    href="https://wa.me/917506849422"
                    target="_blank"
                    rel="noopener noreferrer"
+                   className="flex-1"
                  >
                    <button className="w-full bg-[#B8FF3B] hover:bg-[#A3E635] text-black px-6 py-3 rounded-lg font-semibold transition-colors duration-200 shadow-sm hover:shadow-md flex items-center justify-center gap-2">
                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -451,7 +452,7 @@ export default function NameChangeReasonPage({ params }: PageProps) {
                      WhatsApp
                    </button>
                  </Link>
-                 <Link href="/#contact">
+                 <Link href="/#contact" className="flex-1">
                    <button className="w-full border-2 border-[#B8FF3B] text-black hover:bg-[#B8FF3B] hover:text-black px-6 py-3 rounded-lg font-semibold transition-colors duration-200">
                      Apply Now
                    </button>
