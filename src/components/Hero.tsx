@@ -23,7 +23,7 @@ const heroImages2 = [
 const Hero = () => {
   return (
     <section className="min-h-screen bg-white p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 pt-24 sm:pt-28 md:pt-32 lg:mt-4 ">
-      <div className="relative h-[88vh] sm:h-[75vh] lg:h-[85vh] overflow-hidden rounded-3xl sm:rounded-[2rem] md:rounded-[2rem] lg:rounded-[2rem] bg-[#def8cb]">
+      <div className="relative h-[88vh] sm:h-[75vh] lg:h-[85vh] overflow-hidden rounded-3xl sm:rounded-[2rem] md:rounded-[2rem] lg:rounded-[2rem] bg-[#def8cb] custom-height">
         {/* Main Content Container */}
         <div className="relative z-10 w-full h-full flex items-center mt-20 lg:mt-0">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,7 +49,7 @@ const Hero = () => {
               {/* Right Image Section - Horizontal scroll on Mobile, 2 Column on Desktop */}
               <div className="relative w-full lg:w-[28rem] xl:w-[32rem] h-[50vh] sm:h-[60vh] lg:h-[75vh] overflow-hidden mx-auto lg:mx-0 ">
                 {/* Mobile: Horizontal Scrolling */}
-                <div className="lg:hidden w-full h-full overflow-hidden mt-4">
+                <div className="lg:hidden w-full h-full overflow-hidden mt-4 mb-8 sm:mb-10 custom-margin">
                   <div className="marquee-horizontal">
                     <div className="flex space-x-4 sm:space-x-5">
                       {[...heroImages1, ...heroImages1, ...heroImages2].map((image, index) => (

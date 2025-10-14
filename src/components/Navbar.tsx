@@ -32,7 +32,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation - Centered */}
-          <div className="hidden md:flex justify-center flex-1">
+          <div className="hidden lg:flex justify-center flex-1">
             <div className="flex items-center space-x-5">
               {navItems.map((item) => (
                 <Link
@@ -47,7 +47,7 @@ const Navbar = () => {
           </div>
 
           {/* CTA Section with WhatsApp Icon */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             {/* WhatsApp Icon */}
              <Link
                href="https://wa.me/1234567890"
@@ -74,7 +74,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-black hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black"
@@ -118,7 +118,7 @@ const Navbar = () => {
 
       {/* Mobile menu - Full Page */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-50 bg-white animate-slide-in">
+        <div className="lg:hidden fixed inset-0 z-50 bg-white animate-slide-in">
           <div className="flex flex-col h-full">
             {/* Header with close button */}
             <div className="flex justify-between items-center px-6 py-5 border-b border-gray-100 bg-white">
@@ -160,7 +160,7 @@ const Navbar = () => {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="group flex items-center px-4 py-6 text-3xl font-medium text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-300 ease-out animate-fade-in-up"
+                    className="group flex items-center px-4 py-4 text-xl font-medium text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-300 ease-out animate-fade-in-up"
                     style={{ animationDelay: `${index * 100}ms` }}
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -173,10 +173,10 @@ const Navbar = () => {
               </nav>
               
               {/* CTA Button */}
-              <div className="mt-12 px-4 animate-fade-in-up" style={{ animationDelay: "400ms" }}>
+              <div className="mt-8 px-4 animate-fade-in-up" style={{ animationDelay: "400ms" }}>
                 <Link
                   href="/#contact"
-                  className="flex items-center justify-center w-full bg-[#B8FF3B] text-black px-8 py-5 rounded-2xl text-lg font-semibold hover:bg-[#A3E635] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="flex items-center justify-center w-full bg-[#B8FF3B] text-black px-6 py-4 rounded-2xl text-base font-semibold hover:bg-[#A3E635] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <span>Book 30 Mins Free Meeting</span>
