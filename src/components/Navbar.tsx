@@ -319,7 +319,7 @@ const Navbar = () => {
                   <div key={item.name}>
                     {item.hasDropdown ? (
                       <div className="space-y-2">
-                        <div className="group flex items-center px-4 py-4 text-xl font-medium text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-300 ease-out animate-fade-in-up"
+                        <div className="group flex items-center px-4 py-3 text-lg font-medium text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-300 ease-out animate-fade-in-up"
                              style={{ animationDelay: `${index * 100}ms` }}>
                           <span className="relative">
                             {item.name}
@@ -327,7 +327,7 @@ const Navbar = () => {
                           </span>
                         </div>
                         <div className="ml-6 space-y-1">
-                          {services.slice(0, 6).map((service) => {
+                          {services.slice(0, 3).map((service) => {
                             const IconComponent = service.icon;
                             return (
                               <Link
@@ -356,7 +356,7 @@ const Navbar = () => {
                     ) : (
                       <Link
                         href={item.href}
-                        className="group flex items-center px-4 py-4 text-xl font-medium text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-300 ease-out animate-fade-in-up"
+                        className="group flex items-center px-4 py-3 text-lg font-medium text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-300 ease-out animate-fade-in-up"
                         style={{ animationDelay: `${index * 100}ms` }}
                         onClick={() => setIsMenuOpen(false)}
                       >
