@@ -2,11 +2,103 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { 
+  FileText, 
+  Heart, 
+  Users, 
+  Baby, 
+  UserPlus, 
+  Home, 
+  GraduationCap, 
+  Shield, 
+  Church, 
+  Flag, 
+  Sparkles,
+  ChevronDown
+} from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesHovered, setIsServicesHovered] = useState(false);
+  const [isServicesClicked, setIsServicesClicked] = useState(false);
+
+  const services = [
+    {
+      title: "Change of Name Due to Spelling Mistake",
+      description: "Correct spelling errors in your legal documents and official records.",
+      slug: "spelling-mistake",
+      icon: FileText
+    },
+    {
+      title: "Change of Name Due to Dislike of Current Name",
+      description: "Change your name for personal preference or cultural reasons.",
+      slug: "dislike-current-name",
+      icon: Heart
+    },
+    {
+      title: "Change of Name Due to Divorce",
+      description: "Revert to maiden name or adopt a new name after divorce proceedings.",
+      slug: "divorce",
+      icon: Users
+    },
+    {
+      title: "Change of Name Due to Child's Surname Change",
+      description: "Update your child's surname for family unity or legal requirements.",
+      slug: "child-surname-change",
+      icon: Baby
+    },
+    {
+      title: "Change of Name Due to Combining or Hyphenating Surnames",
+      description: "Combine family names or create hyphenated surnames for marriage.",
+      slug: "combining-hyphenating-surnames",
+      icon: UserPlus
+    },
+    {
+      title: "Change of Name After Marriage",
+      description: "Adopt your spouse's surname or create a new combined family name.",
+      slug: "after-marriage",
+      icon: Heart
+    },
+    {
+      title: "Change Name on Property Card",
+      description: "Update property documents with your new legal name.",
+      slug: "property-card",
+      icon: Home
+    },
+    {
+      title: "Change of Name Due to Mistakes in School Certificates",
+      description: "Correct name errors in educational certificates and academic records.",
+      slug: "school-certificate-mistakes",
+      icon: GraduationCap
+    },
+    {
+      title: "Change of Name After Adoption",
+      description: "Update legal name following adoption procedures.",
+      slug: "after-adoption",
+      icon: Shield
+    },
+    {
+      title: "Change of Name Due to Religious Reasons",
+      description: "Change name for religious conversion or spiritual purposes.",
+      slug: "religious-reasons",
+      icon: Church
+    },
+    {
+      title: "Change of Name Due to Political Statement",
+      description: "Update name for political or ideological expression.",
+      slug: "political-statement",
+      icon: Flag
+    },
+    {
+      title: "Change of Name Due to Transgender Transition",
+      description: "Legal name change to align with gender identity.",
+      slug: "transgender-transition",
+      icon: Sparkles
+    }
+  ];
 
   const navItems = [
+    { name: "SERVICES", href: "#", hasDropdown: true },
     { name: "ABOUT", href: "/#about" },
     { name: "BIRTH CERTIFICATE", href: "/birth-certificate" },
     { name: "FAQ", href: "/#faq" },
@@ -35,13 +127,78 @@ const Navbar = () => {
           <div className="hidden lg:flex justify-center flex-1">
             <div className="flex items-center space-x-5">
               {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-700 hover:text-black px-2 py-2 text-sm font-medium transition-colors duration-200"
-                >
-                  {item.name}
-                </Link>
+                <div key={item.name} className="relative">
+                  {item.hasDropdown ? (
+                    <div
+                      className="relative"
+                      onMouseEnter={() => setIsServicesHovered(true)}
+                    >
+                      <button 
+                        className="text-gray-700 hover:text-black px-2 py-2 text-sm font-medium transition-colors duration-200 flex items-center"
+                        onClick={() => setIsServicesHovered(false)}
+                      >
+                        {item.name}
+                        <ChevronDown className={`ml-1 w-4 h-4 transition-transform duration-200 ${isServicesHovered ? 'rotate-180' : ''}`} />
+                      </button>
+                      
+                      {/* Mega Menu */}
+                      {isServicesHovered && (
+                        <div 
+                          className="fixed top-17 left-0 right-0 mt-2 w-full bg-white shadow-xl border border-gray-200 rounded-lg z-50"
+                          onMouseEnter={() => setIsServicesHovered(true)}
+                        >
+                          <div className="max-w-7xl mx-auto p-8">
+                            <div className="grid grid-cols-3 gap-6">
+                              {services.map((service) => {
+                                const IconComponent = service.icon;
+                                return (
+                                  <Link
+                                    key={service.slug}
+                                    href={`/name-change/${service.slug}`}
+                                    className="flex items-center space-x-4 p-4 rounded-lg hover:bg-[#B8FF3B]/10 transition-colors duration-200 group"
+                                    onClick={() => setIsServicesClicked(false)}
+                                  >
+                                    <div className="w-12 h-12 bg-[#B8FF3B]/20 rounded-lg flex items-center justify-center group-hover:bg-[#B8FF3B]/30 transition-colors duration-200">
+                                      <IconComponent className="w-6 h-6 text-[#4B5563]" />
+                                    </div>
+                                    <div className="flex-1">
+                                      <h4 className="text-sm font-semibold text-gray-900 group-hover:text-[#374151] transition-colors duration-200">
+                                        {service.title}
+                                      </h4>
+                                      <p className="text-xs text-gray-500 mt-1">
+                                        {service.description.substring(0, 50)}...
+                                      </p>
+                                    </div>
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                            
+                            <div className="mt-8 pt-6 border-t border-gray-100 text-center">
+                              <Link
+                                href="/name-change"
+                                className="inline-flex items-center px-6 py-3 bg-[#B8FF3B] text-black text-sm font-semibold rounded-lg hover:bg-[#A3E635] transition-colors duration-200 shadow-sm hover:shadow-md"
+                                onClick={() => setIsServicesHovered(false)}
+                              >
+                                View All Our Services
+                                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="text-gray-700 hover:text-black px-2 py-2 text-sm font-medium transition-colors duration-200"
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
               ))}
             </div>
           </div>
@@ -158,18 +315,57 @@ const Navbar = () => {
             <div className="flex-1 flex flex-col justify-center px-8">
               <nav className="space-y-1">
                 {navItems.map((item, index) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="group flex items-center px-4 py-4 text-xl font-medium text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-300 ease-out animate-fade-in-up"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <span className="relative">
-                      {item.name}
-                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
-                    </span>
-                  </Link>
+                  <div key={item.name}>
+                    {item.hasDropdown ? (
+                      <div className="space-y-2">
+                        <div className="group flex items-center px-4 py-4 text-xl font-medium text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-300 ease-out animate-fade-in-up"
+                             style={{ animationDelay: `${index * 100}ms` }}>
+                          <span className="relative">
+                            {item.name}
+                            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
+                          </span>
+                        </div>
+                        <div className="ml-6 space-y-1">
+                          {services.slice(0, 6).map((service) => {
+                            const IconComponent = service.icon;
+                            return (
+                              <Link
+                                key={service.slug}
+                                href={`/name-change/${service.slug}`}
+                                className="flex items-center px-4 py-2 text-sm text-gray-600 hover:text-black hover:bg-gray-50 rounded-lg transition-all duration-200"
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                <IconComponent className="w-4 h-4 mr-3 text-[#B8FF3B]" />
+                                <span className="truncate">{service.title}</span>
+                              </Link>
+                            );
+                          })}
+                          <Link
+                            href="/name-change"
+                            className="flex items-center px-4 py-2 text-sm text-[#B8FF3B] hover:text-[#A3E635] font-medium rounded-lg transition-all duration-200"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <span>View All Services</span>
+                            <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                          </Link>
+                        </div>
+                      </div>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="group flex items-center px-4 py-4 text-xl font-medium text-gray-800 hover:text-black hover:bg-gray-50 rounded-xl transition-all duration-300 ease-out animate-fade-in-up"
+                        style={{ animationDelay: `${index * 100}ms` }}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        <span className="relative">
+                          {item.name}
+                          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
+                        </span>
+                      </Link>
+                    )}
+                  </div>
                 ))}
               </nav>
               
