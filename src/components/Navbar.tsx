@@ -147,7 +147,7 @@ const Navbar = () => {
                           className="fixed top-17 left-0 right-0 mt-2 w-full bg-white shadow-xl border border-gray-200 rounded-lg z-50"
                           onMouseEnter={() => setIsServicesHovered(true)}
                         >
-                          <div className="max-w-7xl mx-auto p-8">
+                          <div className="max-w-[1490px] mx-auto p-8">
                             <div className="grid grid-cols-3 gap-6">
                               {services.map((service) => {
                                 const IconComponent = service.icon;
