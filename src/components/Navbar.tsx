@@ -146,6 +146,7 @@ const Navbar = () => {
                         <div 
                           className="fixed top-17 left-0 right-0 mt-2 w-full bg-white shadow-xl border border-gray-200 rounded-lg z-50"
                           onMouseEnter={() => setIsServicesHovered(true)}
+                          onMouseLeave={() => setIsServicesHovered(false)}
                         >
                           <div className="max-w-[1490px] mx-auto p-8">
                             <div className="grid grid-cols-3 gap-6">
@@ -207,7 +208,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-4">
             {/* WhatsApp Icon */}
              <Link
-               href="https://wa.me/1234567890"
+               href="https://wa.me/+917506849422"
                target="_blank"
                rel="noopener noreferrer"
                className="flex items-center justify-center w-12 h-12 bg-[#B8FF3B] hover:bg-[#A3E635] rounded-full transition-colors duration-200 shadow-sm hover:shadow-md"

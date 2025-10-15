@@ -181,17 +181,7 @@ html {
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1366px) {
-  .custom-height {
-    height: 115vh;
-  }
-}
 
-@media (min-width: 1367px) {
-  .custom-height {
-    height: 110vh;
-  }
-}
 
 @media (max-width: 360px) and (max-height: 740px) {
   .custom-height {
