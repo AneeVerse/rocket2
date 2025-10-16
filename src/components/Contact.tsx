@@ -233,7 +233,7 @@ const Contact = () => {
                 {/* Service Selection Field */}
                 <div>
                   <label htmlFor="service" className="block text-xs font-semibold text-black mb-1">
-                    Service Required *
+                    Service Required
                   </label>
                   <select
                     id="service"
@@ -241,7 +241,6 @@ const Contact = () => {
                     value={formData.service}
                     onChange={handleInputChange}
                     className="w-full px-3 py-2 border-2 border-gray-200 rounded-lg focus:border-[#B8FF3B] focus:outline-none transition-colors duration-200 text-sm bg-white text-gray-900"
-                    required
                   >
                     <option value="">Select a service</option>
                     <option value="Name Change Certificate">Name Change Certificate</option>

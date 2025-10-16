@@ -305,7 +305,7 @@ const BirthCertificateContact = () => {
                 {/* Service Selection */}
                 <div>
                   <label htmlFor="service" className="block text-xs font-semibold text-black mb-1">
-                    Service Required *
+                    Service Required
                   </label>
                   <div className="relative">
                     <select
@@ -313,7 +313,6 @@ const BirthCertificateContact = () => {
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      required
                       className="w-full px-3 py-2 border-2 border-gray-200 rounded-lg focus:border-[#B8FF3B] focus:outline-none transition-colors duration-200 text-sm bg-white text-gray-900 appearance-none cursor-pointer hover:border-gray-300"
                     >
                       <option value="" className="text-gray-500">Select a service</option>
