@@ -10,9 +10,9 @@ export default function Footer() {
   
   // Contact information based on page
   const contactInfo = isBirthCertificatePage ? {
-    title: "Get Your Birth Certificate Today",
+    title: "Rocket Singh Birth Certificate / Marriage Certificate Consultancy",
     description: "Join thousands who've obtained their birth certificates with professional assistance and complete legal compliance.",
-    address: "Seawood Corner, 117, Nerul East, Sector 25, Nerul, Navi Mumbai, Maharashtra 400706",
+    address: "Seawood Corner, 116, Nerul East, Sector 25, Nerul, Navi Mumbai, Maharashtra 400706",
     phone: "8070905289",
     whatsappUrl: "https://wa.me/918070905289",
     phoneUrl: "tel:+918070905289"
