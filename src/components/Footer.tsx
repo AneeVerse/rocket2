@@ -17,9 +17,9 @@ export default function Footer() {
     whatsappUrl: "https://wa.me/918070905289",
     phoneUrl: "tel:+918070905289"
   } : {
-    title: "Get Your Name Change Done Today",
+    title: "Rocket Singh Birth Certificate / Marriage Certificate Consultancy",
     description: "Join thousands who've successfully changed their names with full legal compliance and professional assistance.",
-    address: "35, Nizam St, Marine Lines East, Mandvi, Null Bazar, Bhuleshwar, Mumbai, Maharashtra 400003",
+    address: "Seawood Corner, 116, Nerul East, Sector 25, Nerul, Navi Mumbai, Maharashtra 400706",
     phone: "7506849422", 
     whatsappUrl: "https://wa.me/917506849422",
     phoneUrl: "tel:+917506849422"

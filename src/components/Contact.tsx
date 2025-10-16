@@ -6,14 +6,15 @@ const Contact = () => {
     firstName: "",
     lastName: "",
     email: "",
-    phoneNumber: ""
+    phoneNumber: "",
+    service: ""
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | "">("");
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -46,7 +47,8 @@ const Contact = () => {
           firstName: "",
           lastName: "",
           email: "",
-          phoneNumber: ""
+          phoneNumber: "",
+          service: ""
         });
       } else {
         setSubmitStatus("error");
@@ -85,6 +87,19 @@ const Contact = () => {
               </p>
             </div>
 
+            {/* Services Offered */}
+            <div className="mb-6 p-4 bg-white rounded-lg border border-gray-200">
+              <h4 className="text-base font-bold text-black mb-3">Services Offered</h4>
+              <div className="flex items-start gap-3">
+                <svg className="w-4 h-4 text-[#B8FF3B] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <div>
+                  <p className="text-sm text-gray-600">Name Change / Gazzet Certificate, Income Certificate, Domicile Certificate, Passport</p>
+                </div>
+              </div>
+            </div>
+
             {/* Contact Information */}
             <div className="mb-6 p-4 bg-white rounded-lg border border-gray-200">
               <h4 className="text-base font-bold text-black mb-3">Contact Information</h4>
@@ -96,7 +111,7 @@ const Contact = () => {
                   </svg>
                   <div>
                     <p className="text-base text-gray-600 leading-relaxed">
-                      35, Nizam St, Marine Lines East, Mandvi, Null Bazar, Bhuleshwar, Mumbai, Maharashtra 400003
+                      Seawood Corner, 116, Nerul East, Sector 25, Nerul, Navi Mumbai, Maharashtra 400706
                     </p>
                   </div>
                 </div>
@@ -213,6 +228,35 @@ const Contact = () => {
                     className="w-full px-3 py-2 border-2 border-gray-200 rounded-lg focus:border-[#B8FF3B] focus:outline-none transition-colors duration-200 text-sm bg-white text-gray-900 placeholder-gray-500"
                     required
                   />
+                </div>
+
+                {/* Service Selection Field */}
+                <div>
+                  <label htmlFor="service" className="block text-xs font-semibold text-black mb-1">
+                    Service Required *
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2 border-2 border-gray-200 rounded-lg focus:border-[#B8FF3B] focus:outline-none transition-colors duration-200 text-sm bg-white text-gray-900"
+                    required
+                  >
+                    <option value="">Select a service</option>
+                    <option value="Name Change Certificate">Name Change Certificate</option>
+                    <option value="Birth Certificate">Birth Certificate</option>
+                    <option value="Marriage Certificate">Marriage Certificate</option>
+                    <option value="Gazette Certificate">Gazette Certificate</option>
+                    <option value="Income Certificate">Income Certificate</option>
+                    <option value="Domicile Certificate">Domicile Certificate</option>
+                    <option value="Passport Services">Passport Services</option>
+                    <option value="Death Certificate">Death Certificate</option>
+                    <option value="Caste Certificate">Caste Certificate</option>
+                    <option value="Non-Criminal Certificate">Non-Criminal Certificate</option>
+                    <option value="Age Certificate">Age Certificate</option>
+                    <option value="Nationality Certificate">Nationality Certificate</option>
+                  </select>
                 </div>
 
                 {/* Submit Button */}

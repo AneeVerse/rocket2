@@ -8,6 +8,7 @@ const BirthCertificateContact = () => {
     name: '',
     email: '',
     phone: '',
+    service: '',
     certificateType: '',
     birthYear: '',
     message: ''
@@ -50,6 +51,7 @@ const BirthCertificateContact = () => {
           name: '',
           email: '',
           phone: '',
+          service: '',
           certificateType: '',
           birthYear: '',
           message: ''
@@ -66,6 +68,21 @@ const BirthCertificateContact = () => {
       setIsSubmitting(false);
     }
   };
+
+  const allServices = [
+    'Name Change Certificate',
+    'Birth Certificate',
+    'Marriage Certificate',
+    'Gazette Certificate',
+    'Income Certificate',
+    'Domicile Certificate',
+    'Passport Services',
+    'Death Certificate',
+    'Caste Certificate',
+    'Non-Criminal Certificate',
+    'Age Certificate',
+    'Nationality Certificate'
+  ];
 
   const certificateTypes = [
     'New Birth Registration',
@@ -282,6 +299,33 @@ const BirthCertificateContact = () => {
                       className="w-full px-3 py-2 border-2 border-gray-200 rounded-lg focus:border-[#B8FF3B] focus:outline-none transition-colors duration-200 text-sm bg-white text-gray-900 placeholder-gray-500"
                       placeholder="+91 9876543210"
                     />
+                  </div>
+                </div>
+
+                {/* Service Selection */}
+                <div>
+                  <label htmlFor="service" className="block text-xs font-semibold text-black mb-1">
+                    Service Required *
+                  </label>
+                  <div className="relative">
+                    <select
+                      id="service"
+                      name="service"
+                      value={formData.service}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-3 py-2 border-2 border-gray-200 rounded-lg focus:border-[#B8FF3B] focus:outline-none transition-colors duration-200 text-sm bg-white text-gray-900 appearance-none cursor-pointer hover:border-gray-300"
+                    >
+                      <option value="" className="text-gray-500">Select a service</option>
+                      {allServices.map((service) => (
+                        <option key={service} value={service} className="text-gray-900">{service}</option>
+                      ))}
+                    </select>
+                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                      <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
 

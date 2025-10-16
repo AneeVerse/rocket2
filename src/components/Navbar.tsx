@@ -150,13 +150,13 @@ const Navbar = () => {
                         >
                           <div className="max-w-[1490px] mx-auto p-8">
                             <div className="grid grid-cols-3 gap-6">
-                              {services.map((service) => {
+                              {services.map((service, index) => {
                                 const IconComponent = service.icon;
                                 return (
                                   <Link
                                     key={service.slug}
                                     href={`/name-change/${service.slug}`}
-                                    className="flex items-center space-x-4 p-4 rounded-lg hover:bg-[#B8FF3B]/10 transition-colors duration-200 group"
+                                    className="flex items-center space-x-4 p-4 rounded-lg hover:bg-[#B8FF3B]/10 transition-colors duration-200 group border-b border-gray-200 last:border-b-0"
                                     onClick={() => setIsServicesClicked(false)}
                                   >
                                     <div className="w-12 h-12 bg-[#B8FF3B]/20 rounded-lg flex items-center justify-center group-hover:bg-[#B8FF3B]/30 transition-colors duration-200">
