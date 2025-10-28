@@ -150,7 +150,7 @@ const PanCardServices = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {processSteps.map((step, index) => {
               const getIconComponent = (iconName: string) => {
-                const icons: { [key: string]: any } = {
+                const icons: { [key: string]: React.ComponentType<{ size?: number; className?: string }> } = {
                   Globe, FileText, Edit, Upload, CreditCard, BarChart3
                 };
                 return icons[iconName] || Globe;

@@ -149,8 +149,8 @@ const PanCardContact = () => {
                 {businessHours.map((hour, index) => (
                   <div key={index} className="flex justify-between items-center py-3 border-b border-gray-100 last:border-b-0">
                     <span className="text-gray-700 font-medium">{hour.day}</span>
-                    <span className={`font-semibold ${hour.time === 'Closed' ? 'text-red-500' : 'text-[#B8FF3B]'}`}>
-                      {hour.time}
+                    <span className={`font-semibold ${hour.hours === 'Closed' ? 'text-red-500' : 'text-[#B8FF3B]'}`}>
+                      {hour.hours}
                     </span>
                   </div>
                 ))}
