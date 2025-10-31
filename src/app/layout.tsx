@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Exo } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const exo = Exo({
@@ -8,20 +9,6 @@ const exo = Exo({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
-
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K3442NKB7M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-K3442NKB7M');
-</script>
-
-
-
 
 export const metadata: Metadata = {
   title: "Name Change Gazette - Your Trusted Legal Partners",
@@ -39,6 +26,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-K3442NKB7M"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-K3442NKB7M');
+          `}
+        </Script>
+      </head>
       <body
         className={`${exo.variable} antialiased font-sans`}
       >
