@@ -11,14 +11,14 @@ export default function Footer() {
   // Contact information based on page
   const contactInfo = isBirthCertificatePage ? {
     title: "Rocket Singh Birth Certificate / Marriage Certificate Consultancy",
-    description: "Join thousands who've obtained their birth certificates with professional assistance and complete legal compliance.",
+    description: "",
     address: "Seawood Corner, 116, Nerul East, Sector 25, Nerul, Navi Mumbai, Maharashtra 400706",
     phone: "8070905289",
     whatsappUrl: "https://wa.me/918070905289",
     phoneUrl: "tel:+918070905289"
   } : {
     title: "Rocket Singh Birth Certificate / Marriage Certificate Consultancy",
-    description: "Join thousands who've successfully changed their names with full legal compliance and professional assistance.",
+    description: "",
     address: "Seawood Corner, 116, Nerul East, Sector 25, Nerul, Navi Mumbai, Maharashtra 400706",
     phone: "7506849422", 
     whatsappUrl: "https://wa.me/917506849422",
@@ -61,7 +61,7 @@ export default function Footer() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                     <a href={contactInfo.phoneUrl} className="text-gray-300 hover:text-white transition-colors text-sm">
-                      {contactInfo.phone}
+                      +91 {contactInfo.phone}
                     </a>
                   </div>
                 </div>

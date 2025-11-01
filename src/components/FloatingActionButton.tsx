@@ -103,7 +103,7 @@ const FloatingActionButton = () => {
                   <span className="ml-3 text-lg font-medium text-gray-700">WhatsApp: +91 9920540535 / +91 992001383</span>
                 </a>
                 <motion.button
-                  onClick={() => handleCopy('+91 99205 40535')}
+                  onClick={() => handleCopy('+91 9920540535')}
                   className="text-gray-500 hover:text-[#B8FF3B] focus:outline-none transition-colors duration-200"
                   whileTap={{ scale: 0.9 }}
                 >

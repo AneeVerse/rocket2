@@ -158,7 +158,7 @@ const BirthCertificateContact = () => {
                   </svg>
                   <div>
                     <p className="text-sm font-semibold text-black">Phone:</p>
-                    <p className="text-sm text-gray-600">8070905289</p>
+                    <p className="text-sm text-gray-600">+91 8070905289</p>
                   </div>
                 </div>
               </div>
